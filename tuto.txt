@@ -1,0 +1,17 @@
+Etape 1 : initialiser le fichier en nodejs: taper npm init dans le terminal
+Etape 2 : installer nodemon (npm install nodemon --save-dev)
+Etape 3 : Modifier dans le package json (mettre dans script, "start": "nodemon app.js")
+Etape 4 : créer un fichier "app.js"
+Etape 5 : Installer express (npm install express)
+Etape 6 : Importer express dans app.js ( const express = require('express'); )
+Etape 7 : Créer une instance de serveur ( const app = express(); )
+Etape 8 : Créer une route par défaut (ex: app.get('/', (req, res) => ... ))
+Etape 9 : Créer le lancement du serveur ( app.listen(PORT), () => {log} )
+Etape 10 : Tester les routes sur Postman
+Etape 11 : Créer un dossier "routes" puis un fichier "nameRouteur.js"
+Etape 12 : Recuperer les routes créer dans app.js et les mettre dans le fichier "nameRouteur.js"
+Etape 13 : Dans nameRouteur.js, importer express puis créer une constante routeur express (const router = express.Router();) qui rend express en middleware
+Etape 14 : Modifier le app des routeur en "router"
+Etape 15 : a la fin de la page nameRouteur, ecrire : 'module.exports = router' qui permet d'exporter les routes
+Etape 16 : Revenir sur app.js, ecrire "const employeRouteur = require('./routes/employeRouteur');" pour faire appel aux routes sur app.js
+Etape 17 : Ecrire "app.use('/', employeRouteur);" qui est le middleware du fichier employeRouteur.js, il va servir a utiliser les routes.

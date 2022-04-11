@@ -1,0 +1,17 @@
+<h1>{{titre}}</h1>
+<form method="POST" action="/modifier/{{data._id}}?_method=PUT">
+    <input type="hidden" name="_id" value="{{data._id}}">
+    <p>
+        <input type="text" name="prenom" placeholder="Prenom" value="{{data.prenom}}">
+    </p>
+    <p>
+        <input type="email" name="email" placeholder="Email" value="{{data.email}}">
+    </p>
+    <p>
+        <input type="number" name="age" value="{{data.age}}">
+    </p>
+    <p>
+        <input type="submit" value="Valider">
+    </p>
+
+</form>

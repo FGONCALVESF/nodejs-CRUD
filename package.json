@@ -1,0 +1,22 @@
+{
+  "name": "projetmongodb",
+  "version": "1.0.0",
+  "description": "entrainement mongodb",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "FabienG.",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "twig": "^1.15.4",
+    "validator": "^13.7.0"
+  }
+}

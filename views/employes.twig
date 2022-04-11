@@ -1,0 +1,36 @@
+<h1>Liste des employes :</h1>
+{{titrePage}}
+<p>
+    <a href="/ajouter">Ajouter</a>
+</p>
+{# <ul>
+    {% for employe in listeEmployes %}
+        <li>{{ employe.prenom|e }} - {{ employe.email }}</li>
+    {% endfor %}
+</ul> #}
+
+<table>
+    <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employe in listeEmployes %}
+        <tr>
+            <td>{{ employe.prenom }}</td>
+            <td>{{ employe.email }}</td>
+            <td>{{ employe.age }}</td>
+            <td> <a href="{{urlModifier}}/{{employe._id}}">Modifier</a></td>
+            <td>
+                <form method="POST" action="{{urlSupprimer}}/{{employe._id}}?_method=DELETE">
+                    <input type="submit" value="supprimer">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
